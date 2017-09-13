@@ -1,114 +1,131 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Trivia Game</title>
+        <title>Trivia Game</title>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    
 </head>
 
 <body>
+    
 
-<div>
-    <button id="start">Start</button>
-	<p id="timer">60</p>
+    <div id="firstScreen">
+        <button id="startButton">Start</button>
+    </div>
+
+    
+    
+    <div class="container">
+                
+        
+        
+        <form id="triviaGame" name="triviaForm">
+            
+            <p id="timer">60</p>
+         
+            <p> Which country does this animal originate from?<br>
+            <input type="radio" name="q1" value="a"> a. Ghana <br>
+            <input type="radio" name="q1" value="b"> b. Tunisia <br>
+            <input type="radio" name="q1" value="c"> c. United States <br>
+            <input type="radio" name="q1" value="d"> d. Brazil <br>
+         </p>
+     <hr>
+
+         <p> Which country spans over 11 timezones?<br>
+            <input type="radio" name="q2" value="a"> a. Canada <br>
+            <input type="radio" name="q2" value="b"> b. China <br>
+            <input type="radio" name="q2" value="c"> c. Russia <br>
+            <input type="radio" name="q2" value="d"> d. USA <br>
+         </p>
+      <hr>
+
+         <p>
+             Which many countries are in Africa? <br>
+            <input type="radio" name="q3" value="a"> a. 23 <br>
+            <input type="radio" name="q3" value="b"> b. 60 <br>
+            <input type="radio" name="q3" value="c"> c. 38 <br>
+            <input type="radio" name="q3" value="d"> d. 55 <br>
+         </p>
+	  <hr>
+            
+          <p>
+            What is the oldest city in the world? <br>
+            <input type="radio" name="q4" value="a"> a. Jericho <br>
+            <input type="radio" name="q4" value="b"> b. Jerusalem <br>
+            <input type="radio" name="q4" value="c"> c. Aleppo <br>
+            <input type="radio" name="q4" value="d"> d. Damascus <br>
+          </p>
+	   <hr>
+
+          <p>
+            What is the capital of Austrailia?<br>
+            <input type="radio" name="q5" value="a"> a. Sydney <br>
+            <input type="radio" name="q5" value="b"> b. Canberra <br>
+            <input type="radio" name="q5" value="c"> c. Melbourne <br>
+            <input type="radio" name="q5" value="d"> d. Perth <br>
+	     </p>
+	  <hr>
+
+	     <p> 
+            Which country has is home to more than half of all natural lakes on earth?<br>
+             <input type="radio" name="q6" value="a"> a. Canada <br>
+             <input type="radio" name="q6" value="b"> b. Switzerland <br>
+             <input type="radio" name="q6" value="c"> c. India <br>
+             <input type="radio" name="q6" value="d"> d. Brazil <br>
+	     </p>
+	  <hr>
+
+        <p>
+            90 percent of the world's population lives in which hemisphere?<br>
+            <input type="radio" name="q7" value="a"> a. Eastern <br>
+            <input type="radio" name="q7" value="b"> b. Southern <br>
+            <input type="radio" name="q7" value="c"> c. Western <br>
+            <input type="radio" name="q7" value="d"> d. Northern <br>
+        </p>
+     <hr>
+
+        <p>
+            Which continent exist in all four hemispheres? <br>
+             <input type="radio" name="q8" value="a"> a. Asia <br>
+             <input type="radio" name="q8" value="b"> b. Africa <br>
+             <input type="radio" name="q8" value="c"> c. Europe <br>
+             <input type="radio" name="q8" value="d"> d. South America <br>
+         </p>
+	  <hr>
+
+        <p>
+            At 90,000 miles, which state has the largest shoreline?<br>
+             <input type="radio" name="q9" value="a"> a. Minnestoa <br>
+             <input type="radio" name="q9" value="b"> b. Florida <br>
+             <input type="radio" name="q9" value="c"> c. Hawaii <br>
+             <input type="radio" name="q9" value="d"> d. California <br>
+         </p>
+      <hr>
+
+        <p>
+            What is the smallest country in the world?<br>
+             <input type="radio" name="q10" value="a"> a. Maldives <br>
+             <input type="radio" name="q10" value="b"> b. Singapore <br>
+             <input type="radio" name="q10" value="c"> c. Vatican <br>
+             <input type="radio" name="q10" value="d"> d. Lebanon <br>
+         </p>
+        
+        
+                    
+    <div id="gameResults">
+                
+    </div>
+    
+
+</form>    
 </div>
+    
+     
+      <script type="text/javascript" src="javascript/app.js"></script>
 
-<div>
-    <form name="triviaForm">
-	 <p> Which country does this animal originate from?<br>
-		<input type="radio" name="q1"> Ghana <br>
-		<input type="radio" name="q1"> Tunisia <br>
-		<input type="radio" name="q1"> United States <br>
-		<input type="radio" name="q1"> Brazil <br>
-	 </p>
-    <hr>
-
-     <p> Which city lies on the equator?<br>
-        <input type="radio" name="q2"> San Juan <br>
-       	<input type="radio" name="q2"> Israel <br>
-       	<input type="radio" name="q2"> Mecca <br>
-       	<input type="radio" name="q2"> San Jose <br>
-     </p>
-    <hr>
-
-	 <p> Which city is considered the fittest city in the United States<br>
-		<input type="radio" name="q3"> City <br>
-		<input type="radio" name="q3"> City <br>
-		<input type="radio" name="q3"> City <br>
-		<input type="radio" name="q3"> City <br>
-	 </p>
-	<hr>
-
-	<p>
-	Question<br>
-		<input type="radio" name="q4"> City <br>
-		<input type="radio" name="q4"> City <br>
-		<input type="radio" name="q4"> City <br>
-		<input type="radio" name="q4"> City <br>
-	 </p>
-	<hr>
-
-    <p>
-		Question<br>
-		<input type="radio" name="q5"> City <br>
-		<input type="radio" name="q5"> City <br>
-		<input type="radio" name="q5"> City <br>
-		<input type="radio" name="q5"> City <br>
-	 </p>
-	<hr>
-
-	<p>
-		Question<br>
-		 <input type="radio" name="q6"> City <br>
-		 <input type="radio" name="q6"> City <br>
-		 <input type="radio" name="q6"> City <br>
-		 <input type="radio" name="q6"> City <br>
-	 </p>
-	<hr>
-
-	<p>
-		Question<br>
-		 <input type="radio" name="q7"> City <br>
-		 <input type="radio" name="q7"> City <br>
-		 <input type="radio" name="q7"> City <br>
-		 <input type="radio" name="q7"> City <br>
-	 </p>
-	<hr>
-
-	<p>
-		Question<br>
-		 <input type="radio" name="q8"> City <br>
-		 <input type="radio" name="q8"> City <br>
-		 <input type="radio" name="q8"> City <br>
-		 <input type="radio" name="q8"> City <br>
-	 </p>
-	<hr>
-
-	<p>
-		Question<br>
-		 <input type="radio" name="q9"> City <br>
-		 <input type="radio" name="q9"> City <br>
-		 <input type="radio" name="q9"> City <br>
-		 <input type="radio" name="q9"> City <br>
-	 </p>
-	<hr>
-
-	<p>
-		Question<br>
-		 <input type="radio" name="q10"> City <br>
-		 <input type="radio" name="q10"> City <br>
-		 <input type="radio" name="q10"> City <br>
-		 <input type="radio" name="q10"> City <br>
-	 </p>
-	<hr>
-
-<div>
-	
-</div>
-
-
-</form>
-<script type="text/javascript" src="javascript/app.js"></script>
-</body>
+    </body>
 
 </html>
