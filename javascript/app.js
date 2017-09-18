@@ -1,12 +1,16 @@
-var t = 60;
+var t = 5;
+var total = 10;
+var correct = 0;
+var incorrect =0;
 
 $(document).ready(function(){
-   
-// Game Timer //
-   $("#startButton").click(function(){
-        
+   $("#triviaGame").hide();
+  
+    
+    $("#startButton").click(function(){
         $("#firstScreen").hide();
-        $("#triviaGame").show();            
+        $("#triviaGame").show();
+        $("#startButton").hide();
 
        
       var sTime = setInterval(function(){
@@ -14,25 +18,21 @@ $(document).ready(function(){
            document.getElementById('timer').innerHTML = t + "";
            t = t-1;
            } else {
-           t= 60;
+           t= 5;
            document.getElementById('timer').innerHTML = t + "";
-           alert("Game Over");
-
+           
 	       clearInterval(sTime);
        }
       }, 1000);
     });
   
-
   
     
     function submitAnswers(){
-  	var total = 10;
-  	var score = 0;
 
 // Get User Input
-  	var q1 = document.forms["triviaForm"]["q1"].value;
-  	var q2 = document.forms["triviaForm"]["q2"].value;
+  	var q1 = document.forms["triviaForm"]["q1"].value;        
+  	var q2 = document.forms["triviaForm"]["q2"].value;        
     var q3 = document.forms["triviaForm"]["q3"].value;
     var q4 = document.forms["triviaForm"]["q4"].value;
     var q5 = document.forms["triviaForm"]["q5"].value;
@@ -50,16 +50,24 @@ $(document).ready(function(){
 //    Check Answers
     for(i =1; i <= total; i++){
      if(eval("q"+i) == answers[i - 1]){
-        score++;
+        correct++;
       }
     }
       
       //   Display Results
       
-      var results = document.getElementById("gameResults");
-      gameResults.innerHTML = '<h3>You got <span>'+score+'</span> correct out of <span>'+total+'</span></h3>';
+      var results = document.getElementById('gameResults');
+//      gameResults.innerHTML = '<h3>You got <span>'+score+'</span> correct out of <span>'+total+'</span></h3>';
         
-     if("")
+        
+//        End of Game
+      if(time === 1){
+          alert("Time Up!")
+//          $("#triviaGame").hide();
+//          $("#gameResults").show();
+//          document.getElementById('gameResults').innerHTML = '<h3>You got <span>' +score+ '</span> correct out of <span>' +total+ '</span></h3>';
+         
+      }
            
     
       return false;

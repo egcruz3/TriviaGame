@@ -1,0 +1,44 @@
+
+#firstScreen{
+    z-index: 15;
+    border: 10px solid;
+    background-color: black;
+    height: auto;
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#words{
+    z-index: 16;
+    font-size: 18px;
+    color: aliceblue;
+    padding: 10px;
+    font-family: serif;
+}
+
+#startButton{
+    color: aliceblue;
+    background-color: black;
+    font-family:serif;
+}
+
+.container{
+    background-color: #8FACB1;
+    z-index: 1;
+    
+}
+
+#triviaGame{
+    padding-left: 100px;
+    padding-right: 100px;
+    align-content: center;
+    
+    
+}
+
+#gamesResults{
+    background-color:cadetblue;
+    height: 200px;
+    width: auto;
+}

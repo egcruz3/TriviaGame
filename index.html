@@ -4,6 +4,8 @@
         <title>Trivia Game</title>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+        <link rel="stylesheet" text="text/css" href="css/style.css">
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     
@@ -14,8 +16,12 @@
 
     <div id="firstScreen">
         <button id="startButton">Start</button>
+        
+        <iframe src="https://giphy.com/embed/11Inr4HyDDb6b6" width="480" height="480" frameBorder="0" class="giphy-embed"></iframe>
+        
+        <p id="words">How many random facts do you really know about the Earth? You'll have one minute to text your knowledge. <br> Press Start to play!</p>
     </div>
-
+        
     
     
     <div class="container">
@@ -24,7 +30,7 @@
         
         <form id="triviaGame" name="triviaForm">
             
-            <p id="timer">60</p>
+            <p id="timer">5 seconds</p>
          
             <p> Which country does this animal originate from?<br>
             <input type="radio" name="q1" value="a"> a. Ghana <br>
